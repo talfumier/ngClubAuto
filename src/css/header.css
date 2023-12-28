@@ -1,0 +1,144 @@
+h1 {
+  display: none;
+}
+
+.title {
+  text-wrap: nowrap;
+  font-size: 1.2rem;
+  color: var(--orange);
+  font-weight: bolder;
+  height: 1.5rem;
+}
+
+p {
+  text-wrap: nowrap;
+  font-size: 1.3rem;
+  color: var(--white);
+  margin: 0;
+}
+
+p.highlighted {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+p.highlighted.phone {
+  font-size: 1.7rem;
+  padding-top: 10px;
+}
+
+address {
+  font-style: normal;
+  line-height: 2rem;
+}
+
+ul.list-group {
+  line-height: 1.5rem;
+}
+
+ul.list-group li {
+  list-style: none;
+}
+
+ul.list-group.in-line * {
+  display: inline;
+}
+
+ul.list-group.in-line p,
+ul.list-group.in-line svg {
+  padding-left: 10px;
+}
+
+ul.list-group.in-line svg {
+  fill: var(--white);
+  height: 2rem;
+  width: 2rem;
+  margin-right: 10px;
+}
+
+div.opening {
+  display: none;
+}
+
+div.circle-icon-container.loc,
+ul.list-group.address {
+  display: none;
+}
+
+ul.list-group.in-line.social-network {
+  display: none;
+  padding: 10px 0 0 40px;
+}
+
+div.circle-icon-container {
+  position: relative;
+  margin-top: 15px;
+  margin-left: 30px;
+  min-width: 30px;
+  height: 30px;
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+}
+
+div.circle-icon-container svg {
+  position: absolute;
+  fill: var(--orange);
+  height: 20px;
+  width: 20px;
+  top: 5px;
+  left: 5px;
+}
+
+div.circle-icon-container+ul.list-group {
+  padding-left: 15px;
+}
+
+button.menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: var(--black);
+  cursor: pointer;
+}
+
+button.menu-toggle svg {
+  height: 2.5rem;
+  width: 3rem;
+  padding: 10px;
+  fill: var(--blue);
+}
+
+@media screen and (min-width: 576px) {
+
+  div.circle-icon-container.loc,
+  ul.list-group.address {
+    display: block;
+  }
+
+  button.menu-toggle {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  div.opening {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1035px) {
+  h1 {
+    display: block;
+    color: var(--white);
+    margin-top: 0.25em;
+    margin-right: .7em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  ul.list-group.in-line.social-network {
+    display: block;
+    padding: 10px 0 0 40px;
+  }
+}

@@ -1,0 +1,242 @@
+/* HEADER AND GRID CONTAINER */
+header {
+  position: relative;
+  background-color: var(--black);
+}
+
+div.header-grid-container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 44px 150px;
+  column-gap: 15px;
+  justify-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* HEADER TOP ROW */
+h1 {
+  display: none;
+}
+
+.title {
+  text-wrap: nowrap;
+  font-size: 1.2rem;
+  color: var(--orange);
+  font-weight: bolder;
+  height: 1.5rem;
+}
+
+p {
+  text-wrap: nowrap;
+  font-size: 1.3rem;
+  color: var(--white);
+  margin: 0;
+}
+
+p.highlighted {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+p.highlighted.phone {
+  font-size: 1.7rem;
+  padding-top: 10px;
+}
+
+address {
+  font-style: normal;
+  line-height: 2rem;
+}
+
+ul.list-group {
+  line-height: 1.5rem;
+  padding: 10px 0;
+}
+
+ul.list-group li {
+  list-style: none;
+}
+
+ul.list-group.in-line * {
+  display: inline;
+}
+
+ul.list-group.in-line p,
+ul.list-group.in-line svg {
+  padding-left: 10px;
+}
+
+ul.list-group.in-line svg {
+  fill: var(--white);
+  height: 2rem;
+  width: 2rem;
+  margin-right: 10px;
+}
+
+div.opening {
+  display: none;
+}
+
+div.circle-icon-container.loc,
+ul.list-group.address {
+  display: none;
+}
+
+ul.list-group.in-line.social-network {
+  display: none;
+}
+
+div.circle-icon-container {
+  align-self: center;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  margin-left: 30px;
+}
+
+div.circle-icon-container svg {
+  position: absolute;
+  fill: var(--orange);
+  height: 20px;
+  width: 20px;
+  top: 5px;
+  left: 5px;
+}
+
+button.menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: var(--black);
+  cursor: pointer;
+}
+
+button.menu-toggle svg {
+  height: 2.5rem;
+  width: 3rem;
+  padding: 10px;
+  fill: var(--blue);
+}
+
+@media screen and (min-width: 576px) {
+  div.header-grid-container {
+    grid-template-rows: auto 60px;
+    grid-template-columns: 44px 220px 44px 150px;
+  }
+
+  button.menu-toggle {
+    display: none;
+  }
+
+  div.circle-icon-container.loc,
+  ul.list-group.address {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  div.header-grid-container {
+    grid-template-columns: 44px auto 44px repeat(2, auto);
+  }
+
+  div.circle-icon-container {
+    margin-left: 20px;
+  }
+
+  div.opening {
+    display: block;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  div.header-grid-container {
+    grid-template-columns: auto 44px auto 44px repeat(2, auto);
+    max-width: 1200px;
+  }
+
+  h1 {
+    display: block;
+    justify-self: left;
+    align-self: center;
+    color: var(--white);
+    height: fit-content;
+    margin-left: 20px;
+  }
+
+  div.circle-icon-container {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  div.header-grid-container {
+    grid-template-columns: 350px 44px auto 44px repeat(3, auto);
+  }
+
+  ul.list-group.in-line.social-network {
+    display: block;
+    align-self: center;
+    margin-left: 15px;
+  }
+}
+
+/* HEADER NAVBAR */
+nav.navbar {
+  display: none;
+}
+
+div.navbar-extension {
+  display: none;
+}
+
+nav.navbar ul.list-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: center;
+  margin: 0;
+  padding: 0 15px;
+  height: 60px;
+}
+
+nav.navbar ul.list-group li {
+  align-self: stretch;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: var(--black);
+  font-weight: 700;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+nav.navbar ul.list-group li:hover {
+  color: var(--white);
+  background-color: var(--orange);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  nav.navbar {
+    display: block;
+    background-color: var(--grey-light);
+    grid-column: 1/-1;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  div.navbar-extension {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: var(--grey-light);
+    position: absolute;
+    bottom: 0;
+  }
+}

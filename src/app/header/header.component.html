@@ -53,13 +53,13 @@
         </svg>
       </li>
     </ul>
-    <button class="menu-toggle">
+    <button class="menu-toggle" (click)="handleToggle()">
       <svg>
         <use href="../../assets/icons.svg#hamMenuIcon" />
       </svg>
     </button>
     <!-- grid second row -->
-    <nav class="navbar">
+    <nav class="navbar" [ngClass]="{ toggled: isToggled }">
       <ul class="list-group">
         <li class="list-group-item">ACCUEIL</li>
         <li class="list-group-item">VENTE</li>
@@ -68,6 +68,6 @@
       </ul>
     </nav>
   </div>
-  <!-- extend navbar (left and right of the grid) to fill space up to viewport edges -->
+  <!-- extend navbar (left and right) to fill up space between grid and viewport edges -->
   <div class="navbar-extension"></div>
 </header>

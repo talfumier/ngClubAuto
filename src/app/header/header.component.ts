@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component,HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @Input()isMobile:boolean=true;
-  toggleVisible(){
-    this.isMobile=!this.isMobile;
+  isToggled:boolean=false;
+  handleToggle(){
+    this.isToggled=!this.isToggled;
+  }
+  @HostListener('window:resize', ['$event'])
+    onWindowResize() {
+      if(window.outerWidth>=576) this.isToggled=false;
   }
 }

@@ -189,6 +189,13 @@ button.menu-toggle svg {
 nav.navbar {
   display: none;
 }
+nav.navbar.toggled {
+  display: block;
+  position:absolute;
+  right:0;
+  bottom:-100px;
+  background-color: var(--grey-light);
+}
 
 div.navbar-extension {
   display: none;
@@ -203,7 +210,18 @@ nav.navbar ul.list-group {
   padding: 0 15px;
   height: 60px;
 }
-
+nav.navbar.toggled ul.list-group {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height:100%;
+  padding:0;
+}
+nav.navbar.toggled ul.list-group li {
+  justify-self: stretch;
+  padding: 5px 5px 5px 15px;
+  font-size: 1.3rem;
+}
 nav.navbar ul.list-group li {
   align-self: stretch;
   list-style: none;
@@ -215,7 +233,6 @@ nav.navbar ul.list-group li {
   display: flex;
   align-items: center;
 }
-
 nav.navbar ul.list-group li:hover {
   color: var(--white);
   background-color: var(--orange);
@@ -225,7 +242,6 @@ nav.navbar ul.list-group li:hover {
 @media screen and (min-width: 576px) {
   nav.navbar {
     display: block;
-    background-color: var(--grey-light);
     grid-column: 1/-1;
     width: 100%;
     z-index: 1000;

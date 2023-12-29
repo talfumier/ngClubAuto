@@ -4,17 +4,15 @@
 
 :root {
   --white:#FFFFFF;
-  --grey-light:#ECEFF3;
+  --grey-light:#eceff3;
+  --grey-light-opaque8: rgb(236, 239, 243,.8 );
   --black:#232628;
   --blue:#6C98E1;
   --red:#FF4848;
   --orange:#CC6119;
   --orange-light:#FAB637;  
-  /* box-sizing: border-box; */
 }
-* {/*Make sure box sizing property applies to all elements (by default this property is not inherited*/
-  box-sizing: inherit;
-}
+
 html {
   font-size:62.5%;/* 16px*62.5%=10px, 1rem=10px*/
 }

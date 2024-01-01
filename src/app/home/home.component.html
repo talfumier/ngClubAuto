@@ -1,0 +1,202 @@
+<main>
+  <section class="main-image-title">
+    <div class="h2-main-title">
+      <h2>
+        <span class="color-white">CLUB AUTO </span
+        ><span class="color-orange">LE MEILLEUR DE L'AUTOMOBILE</span>
+      </h2>
+    </div>
+  </section>
+  <section class="articles">
+    <article class="article-client-entretien" title="article client">
+      <img
+        src="../../assets/images/client.jpg"
+        alt="Clients réjouis devant une voiture"
+      />
+      <div class="article-text">
+        <h3>
+          <span class="color-black">BIENVENUE </span
+          ><span class="color-orange">CHEZ CLUB AUTO</span>
+        </h3>
+        <p class="color-black strong">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
+          quod fugit qui! Enim amet cupiditate accusantium aspernatur ipsam
+          sint? Ea? >
+        </p>
+        <p class="color-grey">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum
+          esse placeat iste doloribus sapiente eius similique. Error
+          exercitationem repellat nulla quaerat ipsam pariatur recusandae fugit
+          obcaecati aperiam amet? Eum iure animi necessitatibus aperiam sunt
+          aliquid quod at corporis sit. Eos doloremque perspiciatis provident
+          deserunt voluptates possimus ut, consectetur earum sint. Alias .
+        </p>
+      </div>
+    </article>
+    <article class="article-client-entretien" title="article entretien">
+      <div class="article-text">
+        <h3>
+          <span class="color-black">LE MEILLEUR DE L'AUTOMOBILE</span>
+        </h3>
+        <p class="color-grey">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum
+          esse placeat iste doloribus sapiente eius similique. Error
+          exercitationem repellat nulla quaerat ipsam pariatur recusandae fugit
+          obcaecati aperiam amet? Eum iure animi necessitatibus aperiam sunt
+          aliquid quod at corporis sit. Eos doloremque perspiciatis provident
+          deserunt voluptates possimus ut, consectetur earum sint. Alias .
+        </p>
+        <ul class="list-group color-grey">
+          <li class="list-group-item">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </li>
+          <li class="list-group-item">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </li>
+          <li class="list-group-item">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </li>
+          <li class="list-group-item">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </li>
+          <li class="list-group-item">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </li>
+        </ul>
+      </div>
+      <img
+        src="../../assets/images/entretien.jpg"
+        alt="Entretien d'une voiture"
+      />
+    </article>
+  </section>
+  <section class="recent-cars">
+    <div class="contract-options">
+      <div class="option rent">
+        <p class="color-black">Vous souhaitez louer ?</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iure
+          nemo debitis nihil illum? Dolores itaque exercitationem nesciunt iste.
+          Sed possimus eligendi dolore et quis.
+        </p>
+      </div>
+      <div class="option purchase">
+        <p class="color-black">Vous souhaitez acheter ?</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iure
+          nemo debitis nihil illum? Dolores itaque exercitationem nesciunt iste.
+          Sed possimus eligendi dolore et quis.
+        </p>
+      </div>
+    </div>
+    <div class="h3-recent-cars">
+      <h3>
+        <span class="color-white">VEHICULES RECENTS</span>
+      </h3>
+      <div class="cards-container">
+        <hr />
+        <div class="card color-white" *ngFor="let car of cars; index as idx">
+          <img
+            src="{{ '../../assets/images/' + car.img }}"
+            alt="{{ 'vehicule récent ' + idx }}"
+          />
+          <div class="card-info">
+            <div class="card-text">
+              {{ car.make }} {{ car.model }}
+              {{ car.options ? car.options.join(", ") : "" }}
+            </div>
+            <div class="card-price">
+              <p class="line-through color-black" *ngIf="car.discount">
+                {{
+                  car.price
+                    | roundToNearest : 100
+                    | currency : "€" : "symbol" : "3.0-0"
+                }}
+              </p>
+              <p>
+                {{
+                  (car.discount ? car.price * car.discount : car.price)
+                    | roundToNearest : 100
+                    | currency : "€" : "symbol" : "3.0-0"
+                }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pros">
+    <h3>
+      <span class="color-black">Pourquoi nous choisir ?</span>
+    </h3>
+    <div class="pro finance">
+      <img src="../../assets/icons/finance.png" alt="Financement" />
+      <ul>
+        <li>
+          <h4>FINANCEMENT</h4>
+        </li>
+        <li class="color-grey">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
+          beatae mollitia consequatur ipsum, obcaecati ea sit quisquam debitis
+          error commodi.
+        </li>
+      </ul>
+    </div>
+    <div class="pro technical">
+      <img src="../../assets/icons/technical.png" alt="Technique" />
+      <ul>
+        <li>
+          <h4>REACTIVITE DE L'EQUIPE TECHNIQUE</h4>
+        </li>
+        <li class="color-grey">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
+          beatae mollitia consequatur ipsum, obcaecati ea sit quisquam debitis
+          error commodi.
+        </li>
+      </ul>
+    </div>
+    <div class="pro customer">
+      <img src="../../assets/icons/customer.png" alt="clientèle" />
+      <ul>
+        <li>
+          <h4>A L'ECOUTE DE NOTRE CLIENTELE</h4>
+        </li>
+        <li class="color-grey">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
+          beatae mollitia consequatur ipsum, obcaecati ea sit quisquam debitis
+          error commodi.
+        </li>
+      </ul>
+    </div>
+    <div class="pro customer">
+      <img src="../../assets/icons/maintenance.png" alt="maintenance" />
+      <ul>
+        <li>
+          <h4>SERVICE &amp; MAINTENANCE</h4>
+        </li>
+        <li class="color-grey">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente
+          beatae mollitia consequatur ipsum, obcaecati ea sit quisquam debitis
+          error commodi.
+        </li>
+      </ul>
+    </div>
+    <div class="contact">
+      <button class="contact color-white">CONTACTEZ NOUS</button>
+    </div>
+  </section>
+  <section class="bottom">
+    <div class="bottom text-box">
+      <p class="color-black">CLUB AUTO</p>
+      <p class="color-white">VENTE ET LOCATION</p>
+      <p id="hidable">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos iure
+        error dolor, reiciendis voluptatum corporis consectetur quisquam quidem
+        at porro autem consequuntur fuga? Laboriosam aliquam ipsam, mollitia
+        obcaecati at deleniti sapiente modi suscipit animi minima exercitationem
+        voluptates corporis aut temporibus?
+      </p>
+    </div>
+  </section>
+</main>

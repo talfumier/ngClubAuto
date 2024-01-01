@@ -1,7 +1,10 @@
 /* HEADER AND GRID CONTAINER */
 header {
-  position: relative;
+  position: fixed;
+  top: 0;
   background-color: var(--black);
+  width:100%;
+  z-index:1000;
 }
 
 div.header-grid-container {

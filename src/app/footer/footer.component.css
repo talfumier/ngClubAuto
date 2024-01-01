@@ -1,8 +1,7 @@
 footer {
-  position: absolute;
-  bottom: 0;
   background-color: var(--black);
   width:100%;
+  min-width:330px;
 }
 div.footer-main-container {
   display:flex;
@@ -78,15 +77,14 @@ hr {
   border-width:1px 0 0 0;
   border-style: solid;
   border-color: var(--grey-light-opaque8);
-  color: var(--white);
   height:0;
   width:90%;
-  max-width:1300px;
+  max-width:1200px;
   margin: 10px auto 10px;
 }
 div.footer-copyright {
   font-size: 1.3rem;
   color:var(--grey-light-opaque8);
   text-align: center;
-  margin-bottom:20px;
+  padding-bottom:20px;
 }

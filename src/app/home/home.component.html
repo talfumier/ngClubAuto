@@ -109,16 +109,16 @@
               <p class="line-through color-black" *ngIf="car.discount">
                 {{
                   car.price
-                    | roundToNearest : 100
+                    | roundToNearest : (car.contract === "rent" ? 10 : 100)
                     | currency : "€" : "symbol" : "3.0-0"
-                }}
+                }}{{ car.contract === "rent" ? "/mois" : "" }}
               </p>
               <p>
                 {{
                   (car.discount ? car.price * car.discount : car.price)
-                    | roundToNearest : 100
+                    | roundToNearest : (car.contract === "rent" ? 10 : 100)
                     | currency : "€" : "symbol" : "3.0-0"
-                }}
+                }}{{ car.contract === "rent" ? "/mois" : "" }}
               </p>
             </div>
           </div>
@@ -188,8 +188,10 @@
   </section>
   <section class="bottom">
     <div class="bottom text-box">
-      <p class="color-black">CLUB AUTO</p>
-      <p class="color-white">VENTE ET LOCATION</p>
+      <h2>
+        CLUB&nbsp;AUTO <br />
+        <span class="color-white">VENTE ET LOCATION</span>
+      </h2>
       <p id="hidable">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos iure
         error dolor, reiciendis voluptatum corporis consectetur quisquam quidem

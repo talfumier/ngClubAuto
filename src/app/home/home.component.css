@@ -1,6 +1,4 @@
 main {
-  margin-top: 80px;
-  min-width:330px;
   background-color: var(--white);
 }
 div.h2-main-title, div.h3-recent-cars {
@@ -61,6 +59,7 @@ div.option {
   padding:10px;
   min-width:300px;
   max-width: 50%;
+  margin-bottom:10px;
 }
 div.option.rent {
   background-color: var(--orange-light);
@@ -103,6 +102,7 @@ hr {
 div.card {
   display:flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 div.card-info {
@@ -195,35 +195,23 @@ div.bottom {
   left:5%;
   background-color: var(--orange-light);
   padding:20px;
-  width:30%;
-  min-width:240px;
+  width:35%;
+  min-width:200px;
   max-width: 500px;
 }
-div.bottom p {
-  font-size: 1.8rem;  
+div.bottom h2 {
+  padding:0;
 }
 p#hidable {
   display:none;
 }
-div.bottom p:not(:nth-child(3)) {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin:15px 0;
-  line-height: 3rem;
-  
-
-}
 @media screen and (min-width: 440px) {
   div.card img {
-      width: 350px;
-    }
+    width: 350px;
+  }
 }
 
 @media screen and (min-width: 576px) {
-  main {
-    margin-top: 155px;
-  }
   section.main-image-title {
     position: relative;
     background: url(../../assets/images/main.jpg) center center / cover no-repeat fixed;
@@ -235,9 +223,6 @@ div.bottom p:not(:nth-child(3)) {
   }
 }
 @media screen and (min-width: 768px) {
-  main {
-    margin-top: 164px;
-  }
   div.contract-options {
     flex-direction: row;
     justify-content:space-evenly;
@@ -289,6 +274,8 @@ div.bottom p:not(:nth-child(3)) {
 @media screen and (min-width: 1300px) {
   p#hidable {
     display: block;
+    font-size: 1.8rem;
+    padding:10px 0 0;
   }
 }
 @media screen and (min-width: 1400px) {

@@ -169,6 +169,11 @@ button.menu-toggle svg {
     color: var(--white);
     height: fit-content;
     margin-left: 20px;
+    cursor: pointer;
+  }
+  h1:hover {
+    opacity:0.8;
+    transition: 0.3s;
   }
 
   div.circle-icon-container {
@@ -189,6 +194,10 @@ button.menu-toggle svg {
 }
 
 /* HEADER NAVBAR */
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}
 nav.navbar {
   display: none;
 }
@@ -235,13 +244,17 @@ nav.navbar ul.list-group li {
   padding: 0 15px;
   display: flex;
   align-items: center;
-}
-nav.navbar ul.list-group li:hover {
-  color: var(--white);
-  background-color: var(--orange);
   cursor: pointer;
 }
-
+nav.navbar ul.list-group li:hover {
+  background-color: var(--orange-opaque8);
+  transition: .3s;
+}
+nav.navbar ul.list-group li.active {
+  color: var(--white);
+  background-color: var(--orange);
+  transition: .3s;
+}
 @media screen and (min-width: 576px) {
   nav.navbar {
     display: block;

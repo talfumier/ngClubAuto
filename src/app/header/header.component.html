@@ -1,7 +1,7 @@
 <header>
   <div class="header-grid-container">
     <!-- grid first row -->
-    <h1 class="header-title">CLUB AUTO</h1>
+    <h1 class="header-title"><a routerLink="/">CLUB AUTO</a></h1>
     <div class="circle-icon-container loc">
       <svg>
         <use href="../../assets/icons/icons.svg#locIcon" />
@@ -61,10 +61,38 @@
     <!-- grid second row -->
     <nav class="navbar" [ngClass]="{ toggled: isToggled }">
       <ul class="list-group">
-        <li class="list-group-item">ACCUEIL</li>
-        <li class="list-group-item">VENTE</li>
-        <li class="list-group-item">LOCATION</li>
-        <li class="list-group-item">CONTACT</li>
+        <li
+          class="list-group-item"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          ACCUEIL
+        </li>
+        <li
+          class="list-group-item"
+          [routerLink]="['/products', 'purchase']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          VENTE
+        </li>
+        <li
+          class="list-group-item"
+          [routerLink]="['/products', 'rent']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          LOCATION
+        </li>
+        <li
+          class="list-group-item"
+          [routerLink]="['/contact']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          CONTACT
+        </li>
       </ul>
     </nav>
   </div>

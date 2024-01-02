@@ -3,6 +3,7 @@ export interface Car {
   make:string,
   model:string,
   options?:string[],
+  contract:string,
   price:number,
   discount?:number,
   top3:boolean,

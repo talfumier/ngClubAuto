@@ -1,0 +1,9 @@
+.wrapper {
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  height: 100vh;
+  /*Fill blank space between main content and footer (when main content is not large enough)*/
+  background: url(../assets/images/sky.jpg) center center / cover no-repeat fixed;
+}

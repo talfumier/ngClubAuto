@@ -11,12 +11,18 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { CarsService } from './services/cars.service';
 import { RoundToNearestPipe } from '../pipes/round-to-nearest.pipe';
+import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './product/product.component';
 
 
 registerLocaleData(localeFr); //register fr-FR locale, default is en-US
 
 const routes:Routes=[
-  {path:'',component:HomeComponent}];
+  {path:'',component:HomeComponent},
+  {path:'products/purchase',component:ProductsComponent},  
+  {path:'products/rent',component:ProductsComponent},
+  {path:'product/id',component:ProductComponent}
+];
 
 @NgModule({
   declarations: [
@@ -25,6 +31,8 @@ const routes:Routes=[
     FooterComponent,
     HomeComponent,
     RoundToNearestPipe,
+    ProductsComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,

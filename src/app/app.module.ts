@@ -3,7 +3,6 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +12,8 @@ import { CarsService } from './services/cars.service';
 import { RoundToNearestPipe } from '../pipes/round-to-nearest.pipe';
 import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './product/product.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { TabsComponent } from './product/tabs/tabs.component';
 
 
 registerLocaleData(localeFr); //register fr-FR locale, default is en-US
@@ -21,7 +22,9 @@ const routes:Routes=[
   {path:'',component:HomeComponent},
   {path:'products/purchase',component:ProductsComponent},  
   {path:'products/rent',component:ProductsComponent},
-  {path:'product/id',component:ProductComponent}
+  {path:'product/:id',component:ProductComponent},
+  {path: '**', component: NotFoundComponent}
+
 ];
 
 @NgModule({
@@ -33,11 +36,13 @@ const routes:Routes=[
     RoundToNearestPipe,
     ProductsComponent,
     ProductComponent,
+    NotFoundComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)    
+    RouterModule.forRoot(routes),  
   ],
   providers: [
     CarsService,

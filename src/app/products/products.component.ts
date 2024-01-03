@@ -11,7 +11,7 @@ import { CarsService } from '../services/cars.service';
 export class ProductsComponent {
   private _contract:string="";
   private _cars:Car[]=[];
-  constructor(private router: Router,service:CarsService){
+  constructor(private router: Router, private service:CarsService){
     const param=router.url.split("/")[2];
     if(param==="purchase" || param==="rent"){
       this._contract=param

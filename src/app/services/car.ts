@@ -1,3 +1,4 @@
+import { Details } from "./details"
 export interface Car {
   id:number,
   make:string,
@@ -8,4 +9,5 @@ export interface Car {
   discount?:number,
   top3:boolean,
   img:string,//image file name including extension
+  details:Details
 }

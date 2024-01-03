@@ -95,7 +95,11 @@
       </h3>
       <div class="cards-container">
         <hr />
-        <div class="card color-white" *ngFor="let car of cars; index as idx">
+        <div
+          class="card color-white"
+          *ngFor="let car of cars; index as idx"
+          [routerLink]="['/product', car.id]"
+        >
           <img
             src="{{ '../../assets/images/' + car.img }}"
             alt="{{ 'vehicule récent ' + idx }}"

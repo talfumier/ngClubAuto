@@ -9,7 +9,7 @@ import { CarsService } from '../services/cars.service';
 })
 export class HomeComponent {
   private _cars:Car[];
-  constructor(service:CarsService){
+  constructor(private service:CarsService){
     this._cars=service.getCars(true);
   }
   get cars(){

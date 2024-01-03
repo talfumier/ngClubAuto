@@ -8,9 +8,7 @@
       <div
         class="card color-white"
         *ngFor="let car of cars; index as idx"
-        [routerLink]="['/product/id', car.id]"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
+        [routerLink]="['/product', car.id]"
       >
         <img
           src="{{ '../../assets/images/' + car.img }}"

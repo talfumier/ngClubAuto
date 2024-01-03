@@ -43,9 +43,7 @@ li.list-group-item {
 }
 
 section.recent-cars {
-  /* background: url(../../assets/images/sky.jpg) center center / cover no-repeat fixed; */
   min-height: 80vh;
-  /* margin-bottom:20px; */
 }
 div.contract-options {
   background: url(../../assets/images/sky.jpg) center center / cover no-repeat fixed;

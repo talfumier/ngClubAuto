@@ -1,5 +1,6 @@
 main {
-  background: url(../../assets/images/sky.jpg) center center / cover no-repeat fixed;
+  /* background: url(../../assets/images/sky.jpg) center center / cover no-repeat fixed; */
+  background-color: var(--grey);
 }
 section.products {
   display:flex;

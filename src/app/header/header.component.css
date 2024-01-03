@@ -194,10 +194,6 @@ button.menu-toggle svg {
 }
 
 /* HEADER NAVBAR */
-a:link, a:visited, a:hover, a:active {
-  text-decoration: none;
-  color: inherit;
-}
 nav.navbar {
   display: none;
 }

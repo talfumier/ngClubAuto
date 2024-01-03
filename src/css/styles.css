@@ -4,6 +4,7 @@
 
 :root {
   --white:#FFFFFF;
+  --white-opaque8: rgb(255, 255, 255,.8);
   --grey-light:#eceff3;
   --grey-light-opaque8: rgb(236, 239, 243,.8 );
   --black:#232628;
@@ -62,7 +63,7 @@ img {/*image responsiveness*/
 /* /MAIN SECTIONS OFFSET */
 main {
   margin-top: 80px; 
-  min-width: 330px;
+  min-width: 330px;  
 }
 @media screen and (min-width: 576px) {
   main {

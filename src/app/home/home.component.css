@@ -77,7 +77,7 @@ div.h3-recent-cars h3{
   text-align: center;
   padding:30px 0 0;
 }
-div.cards-container {
+div.cards-container.home {
   display:grid;
   grid-template-rows: 30px repeat(3,auto);
   grid-template-columns: auto;
@@ -97,7 +97,10 @@ hr {
   height: 0;
   width: 100%;
 }
-div.card {
+div.cards-container img {
+  max-width:350px;
+}
+/* div.card {
   display:flex;
   flex-direction: column;
   cursor: pointer;
@@ -130,7 +133,7 @@ div.card-price p.line-through {
   font-size: 1.2rem;
   line-height: 1rem;
   padding-bottom: 0;
-}
+} */
 section.pros {
   display:flex;
   flex-wrap: wrap;
@@ -235,7 +238,7 @@ p#hidable {
   div.h2-main-title h2 {
     padding: 15px 80px;
   }
-  div.cards-container {
+  div.cards-container.home {
     grid-template-rows: 30px repeat(2,auto);
     grid-template-columns: repeat(2,auto);   
     max-width: 95%;
@@ -253,7 +256,7 @@ p#hidable {
     column-gap: 20px;
     width:70%;
   }
-  div.cards-container {
+  div.cards-container.home {
     grid-template-rows: 30px auto;
     grid-template-columns: repeat(3, auto);
   }
@@ -265,7 +268,7 @@ p#hidable {
   div.article-text {
     padding-left:30px;
   }
-  div.cards-container {
+  div.cards-container.home {
     max-width: 80%;
   }
 }
@@ -283,7 +286,7 @@ p#hidable {
   article.article-client-entretien {
     width: 60%;
   }
-  div.card {
+  /* div.card {
     max-width: 450px;
-  }
+  } */
 }

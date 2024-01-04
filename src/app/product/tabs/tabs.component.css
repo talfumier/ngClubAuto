@@ -13,25 +13,36 @@ ul.list-group.tabs {
   padding:0;
   flex-grow: 1;
 }
-h2 {
+li.list-group-item.tab {
+  background-color: var(--black);
+}
+
+li.list-group-item.tab:not(.active):hover {
+  background-color: var(--white-opaque8);
+  border:.5px solid var(--orange-light);
+  color: var(--black-opaque7);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+li.list-group-item.tab.active {
+  background-color: var(--white);
+  color: var(--black);
+}
+h3 {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5rem;
   text-transform:uppercase;
   padding: 10px 15px;
   margin:0;
   width:120px;
 }
-li.list-group-item.tab {
-  background-color: var(--black);
+h3.underline {
+  text-decoration: underline 5px solid var(--orange);
+  text-underline-offset: 10px;
 }
-li.list-group-item.tab:hover {
-  background-color: var(--white-opaque8);
-  color:var(--black);
-  transition: 0.3s;
-  cursor: pointer;
-}
-li.list-group-item.tab.active {
-  background-color: var(--white);
-  color:var(--black);
-} 
+
 div.active-tab-content {
   font-size: 1.5rem;
   padding:0 15px;

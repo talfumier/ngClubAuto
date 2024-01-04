@@ -1,4 +1,11 @@
 <main>
+  <div class="path">
+    <p>{{ getPath() }}</p>
+  </div>
+  <h2>
+    {{ car.make }} {{ car.model }}
+    {{ car.options ? car.options.join(", ") : "" }}
+  </h2>
   <section class="product-details">
     <img
       src="{{ '../../assets/images/' + car.img }}"

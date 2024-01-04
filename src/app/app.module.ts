@@ -14,6 +14,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './product/product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TabsComponent } from './product/tabs/tabs.component';
+import { CardComponent } from './card/card.component';
 
 
 registerLocaleData(localeFr); //register fr-FR locale, default is en-US
@@ -38,6 +39,7 @@ const routes:Routes=[
     ProductComponent,
     NotFoundComponent,
     TabsComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

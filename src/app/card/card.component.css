@@ -1,0 +1,39 @@
+div.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black);
+  cursor: pointer;
+}
+
+div.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+div.card-text {  
+  font-weight: 600;
+}
+
+div.card-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  height: 40px;
+}
+
+div.card-price p {
+  font-size: 1.3rem;
+  padding: 5px 10px;
+  margin: 0;
+}
+
+div.card-price p.line-through {
+  text-decoration: line-through;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  padding-bottom: 0;
+}

@@ -7,6 +7,7 @@ section.products {
 }
 div.h2-title {
   position:relative;
+  display:none;
 }
 div.h2-title h2 {
   position:absolute;
@@ -19,7 +20,7 @@ div.h2-title h2 {
   background-color: var(--orange);
   z-index: 2000;
 }
-div.cards-container {
+div.cards-container.products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -28,7 +29,7 @@ div.cards-container {
   background-color: transparent;
 }
 
-div.card {
+/* div.card {
   display: flex;
   flex-direction: column;
   background-color: var(--black);
@@ -68,4 +69,4 @@ div.card-price p.line-through {
   font-size: 1.2rem;
   line-height: 1rem;
   padding-bottom: 0;
-}
+} */

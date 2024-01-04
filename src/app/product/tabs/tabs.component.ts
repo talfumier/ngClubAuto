@@ -7,7 +7,7 @@ import { Details } from '../../services/details';
   styleUrl: './tabs.component.css'
 })
 export class TabsComponent implements OnInit {
-  @Input({alias:"data"}) details:Details[]=[];
+  @Input({alias:"data"}) details:Details={}as Details;
   private _tabs:string[]=[];
   private active:boolean[]=[];
   private contents:any[]=[];
@@ -21,17 +21,17 @@ export class TabsComponent implements OnInit {
   get tabs(){
     return this._tabs;
   }
-  handleClick(idx:number){
+  handleClick(idx:number):void{
     if(this.getTabStatus(idx)) return;
     this.active.map((item,i) => {
       if(i===idx)this.active[idx]=!item;
       else this.active[i]=false;
     })
   }  
-  getTabStatus(idx:number){
+  getTabStatus(idx:number):boolean{
     return this.active[idx];
   } 
-  getActiveTabContent(){
+  getActiveTabContent():number{
     return this.contents[this.active.indexOf(true)];
   }
 }

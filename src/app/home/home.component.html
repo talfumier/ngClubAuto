@@ -93,40 +93,12 @@
       <h3>
         <span class="color-white">VEHICULES RECENTS</span>
       </h3>
-      <div class="cards-container">
+      <div class="cards-container home">
         <hr />
-        <div
-          class="card color-white"
+        <app-card
+          [data]="car"
           *ngFor="let car of cars; index as idx"
-          [routerLink]="['/product', car.id]"
-        >
-          <img
-            src="{{ '../../assets/images/' + car.img }}"
-            alt="{{ 'vehicule récent ' + idx }}"
-          />
-          <div class="card-info">
-            <div class="card-text">
-              {{ car.make }} {{ car.model }}
-              {{ car.options ? car.options.join(", ") : "" }}
-            </div>
-            <div class="card-price">
-              <p class="line-through color-black" *ngIf="car.discount">
-                {{
-                  car.price
-                    | roundToNearest : (car.contract === "rent" ? 10 : 100)
-                    | currency : "€" : "symbol" : "3.0-0"
-                }}{{ car.contract === "rent" ? "/mois" : "" }}
-              </p>
-              <p>
-                {{
-                  (car.discount ? car.price * car.discount : car.price)
-                    | roundToNearest : (car.contract === "rent" ? 10 : 100)
-                    | currency : "€" : "symbol" : "3.0-0"
-                }}{{ car.contract === "rent" ? "/mois" : "" }}
-              </p>
-            </div>
-          </div>
-        </div>
+        ></app-card>
       </div>
     </div>
   </section>

@@ -8,6 +8,7 @@
   --grey-light:#eceff3;
   --grey-light-opaque8: rgb(236, 239, 243,.8 );
   --black:#232628;
+  --black-opaque7: rgb(35, 38, 40,.7);
   --blue:#6C98E1;
   --red:#FF4848;
   --orange:#CC6119;
@@ -60,7 +61,7 @@ img {/*image responsiveness*/
   width: 100%;
   height: auto;
 }
-/* /MAIN SECTIONS OFFSET */
+/* MAIN SECTIONS OFFSET */
 main {
   margin-top: 80px; 
   min-width: 330px;  
@@ -74,4 +75,37 @@ main {
   main {
     margin-top: 164px;
   }
+}
+
+/* CARDS CUSTOMIZATION (HOME PAGE) */
+div.cards-container.home div.card-text {
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 992px) {
+  div.cards-container.home div.card {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 992px) {
+  div.cards-container.home div.card {
+    max-width: 400px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  div.cards-container.home div.card {
+    max-width: 350px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  div.cards-container.home div.card {
+    max-width: 450px;
+  }
+}
+/* CARDS CUSTOMIZATION (PRODUCTS PAGE) */
+div.cards-container.products div.card {
+  margin: 15px;
+  max-width: 500px;
+}
+div.cards-container.products div.card-info {
+  font-size: 1.4rem;
 }

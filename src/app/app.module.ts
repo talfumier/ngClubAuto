@@ -15,6 +15,7 @@ import { ProductComponent } from './product/product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { TabsComponent } from './product/tabs/tabs.component';
 import { CardComponent } from './card/card.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 registerLocaleData(localeFr); //register fr-FR locale, default is en-US
@@ -24,6 +25,7 @@ const routes:Routes=[
   {path:'products/purchase',component:ProductsComponent},  
   {path:'products/rent',component:ProductsComponent},
   {path:'product/:id',component:ProductComponent},
+  {path:'contact',component:ContactComponent},
   {path: '**', component: NotFoundComponent}
 
 ];
@@ -40,6 +42,7 @@ const routes:Routes=[
     NotFoundComponent,
     TabsComponent,
     CardComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

@@ -56,27 +56,12 @@ h1 {
 .color-grey-light {
   color: var(--grey-light);
 }
-img {/*image responsiveness*/ 
+/* IMAGE RESPONSIVENESS */
+img {
   object-fit: cover;
   width: 100%;
   height: auto;
 }
-/* MAIN SECTIONS OFFSET */
-main {
-  margin-top: 80px; 
-  min-width: 330px;  
-}
-@media screen and (min-width: 576px) {
-  main {
-    margin-top: 155px;
-  }
-}
-@media screen and (min-width: 768px) {
-  main {
-    margin-top: 164px;
-  }
-}
-
 /* CARDS CUSTOMIZATION (HOME PAGE) */
 div.cards-container.home div.card-text {
   font-size: 1.3rem;

@@ -41,6 +41,7 @@ h3 {
 h3.underline {
   text-decoration: underline 5px solid var(--orange);
   text-underline-offset: 10px;
+  transition: .3s;
 }
 
 div.active-tab-content {

@@ -1,4 +1,5 @@
-import { Details } from "./details"
+import { Details } from "./details";
+
 export interface Car {
   id:number,
   make:string,

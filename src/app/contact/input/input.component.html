@@ -1,0 +1,41 @@
+<div class="form-group">
+  <label
+    for="{{ props.field }}"
+    class="required"
+    [ngClass]="{ required: props.required }"
+  >
+    <p>{{ props.label }}</p>
+  </label>
+  <input
+    #input
+    *ngIf="props.type === 'text' || props.type === 'email'"
+    ngModel
+    #field="ngModel"
+    (ngModelChange)="setValidationError(field)"
+    id="{{ props.field }}"
+    name="{{ props.field }}"
+    type="{{ props.type }}"
+    class="form-control"
+    placeholder="Entrez votre {{ props.label }}"
+    required="{{ props.required }}"
+    minlength="{{ props.min }}"
+    pattern="{{ props.pattern }}"
+  />
+  <textarea
+    #textarea
+    *ngIf="props.type === 'textarea'"
+    ngModel
+    #field="ngModel"
+    id="{{ props.field }}"
+    name="{{ props.field }}"
+    class="form-control"
+    placeholder="Entrez votre {{ props.label }}"
+    rows="5"
+    cols="30"
+  ></textarea>
+  <p class="status pass" *ngIf="props.required">&check;</p>
+  <p class="status fail" *ngIf="props.required">&cross;</p>
+  <div class="alert-danger" *ngIf="error.length > 0">
+    <p>{{ error }}</p>
+  </div>
+</div>

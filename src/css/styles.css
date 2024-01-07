@@ -1,6 +1,7 @@
 /* GLOBAL STYLES */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;500&display=swap');
+@import 'ngx-toastr/toastr';/* Styles for toast messages*/
 
 :root {
   --white:#FFFFFF;
@@ -11,6 +12,7 @@
   --black-opaque7: rgb(35, 38, 40,.7);
   --blue:#6C98E1;
   --red:#FF4848;
+  --red-opaque7: rgb(255, 72, 72,.7);
   --orange:#CC6119;
   --orange-opaque8: rgb(204, 97, 2,.5);
   --orange-light:#FAB637;  
@@ -23,6 +25,9 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
 }
+div.wrapper main {
+  grid-row: 2/3;  
+}
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
   display: none;
@@ -32,7 +37,7 @@ body {
   -ms-overflow-style: none;/* IE and Edge */
   scrollbar-width: none;/* Firefox */
 }
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,label,button {
   font-family: 'Montserrat', sans-serif;
 }
 h1 {
@@ -93,4 +98,8 @@ div.cards-container.products div.card {
 }
 div.cards-container.products div.card-info {
   font-size: 1.4rem;
+}
+/* TOAST MESSAGES */
+.toast-message {
+  font-size: 1.5rem;
 }

@@ -1,6 +1,6 @@
 import { Component,Input, OnInit,ViewChild,ElementRef } from '@angular/core';
 import { NgModel,ControlContainer, NgForm } from '@angular/forms';
-import { Props } from '../form/form.component';
+import { Props } from './props';
 
 @Component({
   selector: 'app-input',

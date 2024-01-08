@@ -3,10 +3,13 @@
     <h2>CONTACTEZ NOUS</h2>
     <form #form="ngForm" (ngSubmit)="submit(form)">
       <div class="container-inputs">
-        <app-input *ngFor="let props of inputProps" [props]="props"></app-input>
+        <app-input
+          *ngFor="let props of props.inputs"
+          [props]="props"
+        ></app-input>
       </div>
       <div class="container-message">
-        <app-input [props]="message_props"></app-input>
+        <app-input [props]="props.textarea"></app-input>
         <button [disabled]="!form.valid">Envoyez</button>
       </div>
       <!-- <p>{{ form.value | json }}</p> -->
